@@ -111,7 +111,10 @@ class Stage:
         pool.close()
         pool.join()
         return out
-
+    def slice_list(self,data,n_slices=16):
+        step=int(len(data)/n_slices)
+        out=[data[i : i + step] if i + step < len(data) else data[i::] for i in range(0, len(data), step)]
+        return out
     def get_name(self):
         return self.name
 
@@ -128,7 +131,10 @@ class Pipeline:
     stage_dict = {}
     cache_path = "sumohub/cache/{}.pickle"
 
-    def __init__(self, stages):
+    def __init__(self, stages, clear_cache=False):
+        if clear_cache:
+            print("Clearing cache...")
+            self.clear_cache(stages)
         print("Initializing the pipeline")
         print("Entering " + stages[0].get_name() + " stage")
         stages[0].rx(None)
@@ -144,16 +150,17 @@ class Pipeline:
     def backup(self, name, data):
         self.stage_dict.update({name: data})
 
-    def clear_cache(self):
+    def clear_cache(self, stages):
         print("Cache cleaning...")
-        for stage in self.stage_dict.keys():
-            cache_file = self.cache_path.format(stage.get_name())
-            if os.path.exists(cache_file):
-                os.remove(cache_file)
+        for stage in stages:
+            cache_file_path = self.cache_path.format(stage.get_name())
+            if os.path.exists(cache_file_path):
+                os.remove(cache_file_path)
+            else:
+                print("No file: " + cache_file_path)
         print("Cache cleared...")
 
 
 if __name__ == "__main__":
     stage = Stage("Uniprot->PDB")
     pipe = Pipeline([stage, stage])
-

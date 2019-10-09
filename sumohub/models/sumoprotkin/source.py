@@ -1,22 +1,30 @@
 from models.pipelines import Pipeline, Stage
-import pandas as pd
+
 import requests
 import re
 import bs4
 import os
 import pyarrow.feather as feather
-
+import pandas as pd
 
 
 class Source(Stage):
+    """
+    Source Stage.
+    Its responsible for loading or GETting the data for SUMO prediction.
+    """
     # URL's:
-    url_1 = "https://www.uniprot.org/docs/pkinfam"
-
+    url = "https://www.uniprot.org/docs/pkinfam"
 
     def source(self):
+        """
+        Source method implementation.
+        It GETs the data from self.url wich is by default "https://www.uniprot.org/docs/pkinfam".
+        It may be interesting if we can get the UNIPROT IDs from a file or other locations. TODO
+        """
 
         # Code to download human kinases list updated in html format
-        response = requests.get(self.url_1)
+        response = requests.get(self.url)
 
         # Obtain page in utf-8 xml format
         html_doc = bs4.BeautifulSoup(response.content, "html.parser")
@@ -46,6 +54,11 @@ class Source(Stage):
     # Parse document from url_1 with protein kinases GENES names.
     # Input document: pfam with protein kinases data (Uniprot ID, Gene names, Families).
     def parse_data(self, response_doc):
+        """
+        Method for parsing the response through regular expressions. 
+            Its need some more work to optimize
+
+        """
         # Regex for cleaning text
         # Doc title
         regex_title = re.compile(r"^\s\s*====*$", re.MULTILINE)
@@ -76,14 +89,15 @@ class Source(Stage):
             ]
 
         return title_html, data
-
-    # def preprocessing(self, data):
-    #     return data
-
-    # def processing(self, data):
-    #     return data
+        
 
     def data_adapter(self, data):
+        """
+        Last method of the inner pipeline, creates de data dictionary we use as data container.
+        It contains:
+            - "dataframe": primary dataframe with all the data we have so far.
+            - "uniprot_ids": list of uniprot ids in "dataframe", maybe it's helpful in some other stages 
+        """
         # OUTPUT DATA:
         # "dataframe" => Primary dataframe:
         # ID GENE HUGO_SYMBOL FAMILY PDB
@@ -92,5 +106,4 @@ class Source(Stage):
         # *    *       *         *    *
         # ==============================
         # "ID" => UNIPROT_ID list
-        return {"dataframe": data,"uniprot_ids":data["ID"].to_list()}
-
+        return {"dataframe": data, "uniprot_ids": data["ID"].to_list()}

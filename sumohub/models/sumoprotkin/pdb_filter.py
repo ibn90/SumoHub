@@ -52,12 +52,20 @@ class PDB_Filter(Stage):
     def data_adapter(self, data):
         # There are PDB associated to many UNIPROT ID, we need to check it
 
-        filtered_dataframe = data["dataframe"].merge(data["high_res"], on="PDB", how="inner")
-        dropped_low_res = data["dataframe"].merge(data["low_res"],on="PDB",how="inner")
+        filtered_dataframe = data["dataframe"].merge(
+            data["high_res"], on="PDB", how="inner"
+        )
+        dropped_low_res = data["dataframe"].merge(
+            data["low_res"], on="PDB", how="inner"
+        )
         output_data = {
             "dataframe": filtered_dataframe,
             "no_pdb_uniprot_ids": data["no_pdb_uniprot_ids"],
-            "uniprot_same_pdb": data["dataframe"][data["dataframe"]["PDB"].isin(data["dataframe"][data["dataframe"].duplicated(["PDB"])]["PDB"])],
+            "uniprot_same_pdb": data["dataframe"][
+                data["dataframe"]["PDB"].isin(
+                    data["dataframe"][data["dataframe"].duplicated(["PDB"])]["PDB"]
+                )
+            ],
             "dropped_low_res": dropped_low_res,
         }
 

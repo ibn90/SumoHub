@@ -10,7 +10,10 @@ from requests_toolbelt import MultipartEncoder
 
 class GPSSumo:
     def __init__(
-        self, config={"sum": "Medium", "bin": "Medium"}, tpool=None, n_threads=2
+        self,
+        config={"sum": "All", "bin": "All"},
+        tpool=None,
+        n_threads=cpu_count(),
     ):
         """
         
@@ -21,7 +24,7 @@ class GPSSumo:
         self.gps_sumo_show = "http://sumosp.biocuckoo.org/showResult.php"
 
         self.n_threads = n_threads
-        self.pool=Pool(processes=int(self.n_threads)) 
+        self.pool = Pool(processes=int(self.n_threads))
 
     def query(self, ID):
 
@@ -96,7 +99,9 @@ class GPSSumo:
                     print("Error en get")
         else:
             print("Error en post")
-        return OrderedDict(table)
+        
+        return OrderedDict(table or {})
+        
 
     def multiquery(self, IDs):
         if not self.pool:
