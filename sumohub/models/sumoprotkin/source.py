@@ -4,7 +4,6 @@ import requests
 import re
 import bs4
 import os
-import pyarrow.feather as feather
 import pandas as pd
 
 

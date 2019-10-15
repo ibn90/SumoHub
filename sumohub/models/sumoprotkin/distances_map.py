@@ -1,22 +1,16 @@
-from models.pipelines import Pipeline, Stage
-import pandas as pd
-import os
-
-# Wrap the ftp url as a file and feed the biopython pdb parser with it
-import urllib
-import gzip as gz
-import Bio.PDB
-from Bio.PDB.MMCIFParser import MMCIFParser
-from Bio.PDB.Polypeptide import is_aa
-from prody import parsePDBStream, fetchPDB
-import requests
-import re
 import asyncio
-import aiohttp
-import uvloop
-from multiprocessing.pool import Pool
 import itertools
+import os
+import re
+from multiprocessing.pool import Pool
+
+import aiohttp
 import numpy
+import pandas as pd
+import requests
+import uvloop
+
+from models.pipelines import Pipeline, Stage
 from models.sumoprotkin.predictors import predictors
 
 

@@ -1,7 +1,6 @@
 from models.pipelines import Pipeline, Stage
 import pandas as pd
 import os
-import json
 
 
 class Uniprot_PDB_Fasta(Stage):

@@ -5,14 +5,6 @@ let plugin = LiteMol.Plugin.create({
 });
 plugin.context.logger.message(`Hello LiteMol`);
 
-let plugin2 = LiteMol.Plugin.create({ 
-    target: document.getElementById('litemol2'),
-    viewportBackground: '#ffffff',
-    layoutState: { hideControls: true } // you can also include isExpanded: true
-});
-plugin2.context.logger.message(`Hello LiteMol`);
-
-
 Transformer = LiteMol.Bootstrap.Entity.Transformer
 
 let id = '1cbs';

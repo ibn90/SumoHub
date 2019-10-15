@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes,user-scalable=no">
+  <meta name="viewport" content="width=device-width">
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -27,16 +27,9 @@
 
   <!-- PDB Component Library Integration -->
   <!-- Complied & minified library css -->
-  <link rel="stylesheet"
-    href="//www.ebi.ac.uk/pdbe/pdb-component-library/v1.0/css/pdb.component.library.min-1.0.0.css" />
+  <link rel="stylesheet" href="css/pdb.component.library.min-1.0.0.css" />
 
-  <!-- Dependencey scripts (these can be skipped if already included in page) -->
-  <script src="//www.ebi.ac.uk/pdbe/pdb-component-library/libs/d3.min.js"></script>
-  <script src="//www.ebi.ac.uk/pdbe/pdb-component-library/libs/angular.1.4.7.min.js"></script>
 
-  <!-- Complied & minified library JS -->
-  <script src="//www.ebi.ac.uk/pdbe/pdb-component-library/v1.0/js/pdb.component.library.min-1.0.0.js"></script>
-  <script type="text/javascript" src="/eel.js"></script>
 
 
 </head>
@@ -657,32 +650,29 @@
                 <div class="col">
                   <div class="card text-white  o-hidden ">
                     <div style="position:relative;height:100%;width:100%;">
-                      <pdb-seq-viewer entry-id="1aqd" entity-id="1"></pdb-seq-viewer>
+                      <pdb-seq-viewer entry-id="1cbs" entity-id="1"></pdb-seq-viewer>
                     </div>
 
                   </div>
                 </div>
               </div>
               <div class="row h-50">
-
-
                 <div class="col-xl-6">
                   <div class="card text-white  o-hidden h-100 ">
                     <div class="card-body">
-                      <div style="position:relative;height:100%;width:100%;">
-                        <pdb-topology-viewer entry-id="1aqd" entity-id="1"></pdb-topology-viewer>
-                      </div>
+                        <pdb-topology-viewer entry-id="1cbs" entity-id="1"></pdb-topology-viewer>
                     </div>
                   </div>
                 </div>
                 <div class="col-xl-6">
-                  <div class="card text-white  o-hidden h-100 ">
+                  <div class="card text-white o-hidden h-100 ">
                     <div class="card-body">
-                      <div style="position:relative;height:100%;width:100%;">
-                        <pdb-lite-mol pdb-id="'1cbs'" hide-controls="True"></pdb-lite-mol>
-                      </div>
+                        <div style="height: 90%;width:90%;"><pdb-lite-mol pdb-id="'1cbs'" hide-controls="true" load-ed-maps="true"></pdb-lite-mol></div>
+                        
+                        
                     </div>
                   </div>
+
                 </div>
 
               </div>
@@ -758,7 +748,16 @@
       </div>
     </div>
   </div>
+  <!-- Dependencey scripts (these can be skipped if already included in page) -->
+  <script src="js/d3.min.js"></script>
+  <script src="js/angular.1.4.7.min.js"></script>
 
+  <!-- Complied & minified library JS -->
+  <script src="js/pdb.component.library.min-1.0.0.js"></script>
+
+  <!-- Eel library file-->
+  <script type="text/javascript" src="/eel.js"></script>
+  
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -769,7 +768,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
   <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
@@ -778,14 +777,14 @@
 
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>
+  <!-- <script src="js/demo/chart-area-demo.js"></script> -->
 
   <!-- Scripts -->
 
 
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-  <!-- <script src="js/main.js"></script>
-  <script src="js/litemol.js"></script> -->
+  <!-- <script src="js/main.js"></script> -->
+  <!-- <script src="js/litemol.js"></script> -->
 
   <!-- PDB Component Library -->
   <script>

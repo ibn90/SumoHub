@@ -16,7 +16,7 @@ else:
 
 print("Starting Pipeline")
 start = time.perf_counter()
-stages = sumo.stages(debug=False)
+stages = sumo.stages(debug=True)
 pipelines.Pipeline(stages, clear_cache=clear)
 stop = time.perf_counter() - start
 print("Time: " + str(stop) + "s")
