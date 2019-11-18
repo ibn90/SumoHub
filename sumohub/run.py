@@ -1,22 +1,31 @@
 import models.sumoprotkin as sumo
 import models.pipelines as pipelines
 import os
-import argparse
-import time
 
-parser = argparse.ArgumentParser(description="SumoProtKin tool cli")
-parser.add_argument("--reset_cache", help="Reset cache file")
-args = parser.parse_args()
-print(args)
+def sumo_stages(IDs=None):
+    if IDs:
+        if len(IDs)==1:
+            pass
+        elif len(IDs)>1:
+            pass
+        else:
+            pass
+    else:
+        return sumo.stages(debug=False)
 
-if args.reset_cache == "on":
-    clear = True
-else:
-    clear = False
 
-print("Starting Pipeline")
-start = time.perf_counter()
-stages = sumo.stages(debug=True)
-pipelines.Pipeline(stages, clear_cache=clear)
-stop = time.perf_counter() - start
-print("Time: " + str(stop) + "s")
+
+
+if __name__=="__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="SumoProtKin tool cli")
+    parser.add_argument("--reset_cache", help="Reset cache file")
+    args = parser.parse_args()
+
+    if args.reset_cache == "on":
+        clear = True
+    else:
+        clear = False
+    stages = sumo.stages(debug=False)
+    pipelines.Pipeline(stages, clear_cache=clear)

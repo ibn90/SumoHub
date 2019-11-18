@@ -1,0 +1,65 @@
+,ID,Gene,Hugo_Symbol,Family,PDB
+173,Q16513,PKN2,PKN2_HUMAN,AGC Ser/Thr protein kinase family,4rrv
+176,Q16513,PKN2,PKN2_HUMAN,AGC Ser/Thr protein kinase family,6ccy
+241,P41743,KPCI,KPCI_HUMAN,AGC Ser/Thr protein kinase family,5lih
+956,P54646,AAPK2,AAPK2_HUMAN,CAMK Ser/Thr protein kinase family,5ezv
+1018,Q8WZ42,TITIN,TITIN_HUMAN,CAMK Ser/Thr protein kinase family,4c4k
+1028,Q8WZ42,TITIN,TITIN_HUMAN,CAMK Ser/Thr protein kinase family,4uow
+1725,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3cqu
+1730,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,1o6k
+1731,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3mv5
+1734,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,6buu
+1735,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,2x39
+1736,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3e87
+1737,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3e88
+1743,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,2jdo
+1745,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,2jdr
+1752,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3cqw
+1753,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,4ekk
+1771,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3e8d
+1782,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,2xh5
+1783,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3ow4
+1787,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,3qkk
+1793,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,2uw9
+1795,P49841,GSK3B,GSK3B_HUMAN,CMGC Ser/Thr protein kinase family,1o6l
+1820,P28482,MK01,MK01_HUMAN,CMGC Ser/Thr protein kinase family,4nif
+1857,P28482,MK01,MK01_HUMAN,CMGC Ser/Thr protein kinase family,5v62
+1858,P28482,MK01,MK01_HUMAN,CMGC Ser/Thr protein kinase family,5v61
+1863,P28482,MK01,MK01_HUMAN,CMGC Ser/Thr protein kinase family,2y9q
+1866,P28482,MK01,MK01_HUMAN,CMGC Ser/Thr protein kinase family,4h3p
+1904,P28482,MK01,MK01_HUMAN,CMGC Ser/Thr protein kinase family,3tei
+2076,Q16539,MK14,MK14_HUMAN,CMGC Ser/Thr protein kinase family,2onl
+2104,Q16539,MK14,MK14_HUMAN,CMGC Ser/Thr protein kinase family,2okr
+2382,P36507,MP2K2,MP2K2_HUMAN,STE Ser/Thr protein kinase family,4h3q
+2391,Q13163,MP2K5,MP2K5_HUMAN,STE Ser/Thr protein kinase family,4ic7
+2394,P52564,MP2K6,MP2K6_HUMAN,STE Ser/Thr protein kinase family,2y8o
+2395,P52564,MP2K6,MP2K6_HUMAN,STE Ser/Thr protein kinase family,5etf
+2408,O14733,MP2K7,MP2K7_HUMAN,STE Ser/Thr protein kinase family,4ux9
+2435,Q9Y2U5,M3K2,M3K2_HUMAN,STE Ser/Thr protein kinase family,2npt
+2446,Q99759,M3K3,M3K3_HUMAN,STE Ser/Thr protein kinase family,2o2v
+2678,Q7RTN6,STRAA,STRAA_HUMAN,STE Ser/Thr protein kinase family,2wtk
+2717,P37023,ACVL1,ACVL1_HUMAN,TKL Ser/Thr protein kinase family,4fao
+2725,P36894,BMR1A,BMR1A_HUMAN,TKL Ser/Thr protein kinase family,2h62
+2772,P15056,BRAF,BRAF_HUMAN,TKL Ser/Thr protein kinase family,6u2g
+2778,P15056,BRAF,BRAF_HUMAN,TKL Ser/Thr protein kinase family,4mne
+2860,Q9NWZ3,IRAK4,IRAK4_HUMAN,TKL Ser/Thr protein kinase family,3mop
+2869,Q8IVT5,KSR1,KSR1_HUMAN,TKL Ser/Thr protein kinase family,5vyk
+2947,Q9Y572,RIPK3,RIPK3_HUMAN,TKL Ser/Thr protein kinase family,5v7z
+2988,P37173,TGFR2,TGFR2_HUMAN,TKL Ser/Thr protein kinase family,3kfd
+2996,P37173,TGFR2,TGFR2_HUMAN,TKL Ser/Thr protein kinase family,2pjy
+3515,P29317,EPHA2,EPHA2_HUMAN,Tyr protein kinase family,3kka
+3644,P04626,ERBB2,ERBB2_HUMAN,Tyr protein kinase family,2ks1
+3665,P21860,ERBB3,ERBB3_HUMAN,Tyr protein kinase family,4riy
+3669,P21860,ERBB3,ERBB3_HUMAN,Tyr protein kinase family,4riw
+3671,P21860,ERBB3,ERBB3_HUMAN,Tyr protein kinase family,4rix
+3719,P11362,FGFR1,FGFR1_HUMAN,Tyr protein kinase family,3dpk
+3722,P11362,FGFR1,FGFR1_HUMAN,Tyr protein kinase family,3krj
+3724,P11362,FGFR1,FGFR1_HUMAN,Tyr protein kinase family,3krl
+3951,P06213,INSR,INSR_HUMAN,Tyr protein kinase family,4xss
+4707,Q02763,TIE2,TIE2_HUMAN,Tyr protein kinase family,3bea
+5147,P19784,CSK22,CSK22_HUMAN,Other,3u87
+5163,P19525,E2AK2,E2AK2_HUMAN,Other,6npy
+5218,O14920,IKKB,IKKB_HUMAN,Other,3brt
+5491,Q9Y3S1,WNK2,WNK2_HUMAN,Other,6fbk
+5501,Q96J92,WNK4,WNK4_HUMAN,Other,2v3s
+5572,P42345,MTOR,MTOR_HUMAN,Atypical: PI3/PI4-kinase family,5wbh
